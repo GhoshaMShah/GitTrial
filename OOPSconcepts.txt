@@ -1,0 +1,52 @@
+super:
+should be used only in starting
+can be used in both method or constructor
+can access method of super class in base class constructor
+can't access constructor of super class in base class method
+super() of base class is called by default in any dervied constructor
+super is mandatorily in 1st line of method/constructor. so only 1 super in method/constructor
+
+static:
+method can only access static var,
+non static method can access both static and non static var
+only 1 copy of var for all obj in class
+method can only be inherited, not overriden
+
+final:
+var can't be changed
+method can't be overridden
+class can't be inherited
+
+abstract:
+can't instantiate obj of abstract class
+abstract class can have both abs (derived class has to implement it mandatorily)  and non abs method.
+
+Abs ob=new Child()
+ob will be able to access only methods of Abs
+Interface ob=new Child()
+ob will be able to access only methods of Interface
+Parent ob=new Child()
+ob will be able to access only methods of Parent
+
+
+interface:
+can't instantiate obj of interface
+can have only public, abs method.
+var are public, static and final by default.
+can extend multiple interface
+classes can implement multiple interfaces
+implementer class has to implement all interface methods mandatorily (those methods will be public methods only)
+interfaces don't have constructor
+
+
+exception: 5 keywords
+throws: method throws exception: may/ may not throw exception
+throw: throw custom exception
+but the above method doesn't catch exception. Exception is caught by method caller
+try: 
+catch:
+finally: executed regardless of catch is executed or not (exception was thrown or not)
+
+
+boxing
+

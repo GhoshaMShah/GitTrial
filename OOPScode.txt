@@ -1,0 +1,264 @@
+selenium:
+
+package selLastTry;
+import org.openqa.selenium.*;
+
+
+
+public class sel {
+	public static void main(String[] s)
+	{
+	System.setProperty("webdriver.chrome.driver", "C:/Users/Owner/Rinki/Trent BDA/sem3/Job/Rishabh/QA/QASelenium/chromedriver-win64/chromedriver-win64/chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	System.out.println("st");
+	}
+
+}
+
+exception:
+
+package exception;
+
+public class tryCatch {
+	
+		public void isOddThenException(int a) throws NullPointerException
+		{
+			if(a%2==1) throw new ArithmeticException("num is odd");
+			else System.out.println("num is even");
+		}
+		public void hasVowelThenException(String s) throws ArrayIndexOutOfBoundsException
+		{
+			if (s.contains("a") || s.contains("e") || s.contains("i") || s.contains("o") || s.contains("u")) 
+			    // The string contains at least one of the vowels 'a', 'e', 'i', 'o', or 'u'
+			
+
+					throw new ArithmeticException("string has vowels");
+			else System.out.println("string has no vowels");
+		}
+		
+		
+		public static void main(String[] b)
+		{
+			tryCatch a= new tryCatch();
+			a.isOddThenException(6);
+			a.hasVowelThenException("vj");
+			
+		}
+
+}
+
+
+constructor overloading method overloading:
+
+package JavaAssessment;
+class g
+{
+	int i=10,j=20; 
+	static int staticVar=2;
+	g()
+	{
+		i=56;
+		j=78;
+	
+	}
+	g(int a,int b)
+	{
+		i=a;
+		j=b;
+	
+	}
+	
+	public void add()
+	{
+		System.out.println("a+b="+(i+j));
+	}
+	public void add(int y,int k)
+	{
+	System.out.println("a+b="+(y+k));
+	}
+	public static void staticMethod()
+	{
+		System.out.println("staticVar value="+staticVar);
+	}
+	public void nonStaticMethod()
+	{
+		System.out.println("non staticVar value="+(i+j));
+		System.out.println("staticVar value="+staticVar);
+	}
+	
+}
+
+public class staticOverridingCons {
+	
+	
+	public static void main(String[] s)
+	{
+		
+	g i=new g();
+	g h=new g(12,45);
+	h.add();
+	h.add(10,20);
+	g.staticMethod();
+	h.nonStaticMethod();
+	
+		
+	}
+
+}
+
+
+call by value call by reference:
+
+package PracticeQuestions;
+
+public class two {
+	int val1=40,val2=50;
+	public void callByVal(int a,int b)
+	{
+		int temp=a;
+		a=b;
+		b=temp;
+	}
+	public void callByRef(two b)
+	{
+		int temp=b.val1;
+		b.val1=b.val2;
+		b.val2=temp;
+	}
+	
+	
+	public static void main(String[] s)
+	{
+		
+		two a=new two();
+		two b=new two();
+	
+		a.callByVal(a.val1,a.val2);
+		System.out.println("val1="+a.val1+" val2="+a.val2);
+		b.callByRef(b);
+		System.out.println("val1="+b.val1+" val2="+b.val2);
+	}
+
+}
+
+
+this:
+
+package PracticeQuestions;
+
+public class three {
+	int a=12,b=13,sum;
+	public int findSum(three obj)
+	{
+		this.sum=this.a+this.b;
+		return this.sum;
+	}
+	public static void main(String[] s)
+	{
+		three obj=new three();
+		int res=obj.findSum(obj);
+		System.out.println("Sum="+res);
+	}
+
+}
+
+
+nested class:
+
+package PracticeQuestions;
+
+public class thirteen {
+	
+	void display()
+	{
+		System.out.println("This is outer display method");
+		
+	}
+	
+	public class thirteenInner
+	{
+		void display()
+		{
+			System.out.println("This is inner display method");
+			
+		}
+		
+	}
+
+
+	public static void main(String[] s)
+	{
+		thirteen obj1=new thirteen();
+		thirteen.thirteenInner obj2=obj1. new thirteenInner();
+		obj1.display();
+		obj2.display();
+	}
+
+}
+
+
+
+string reverse:
+
+
+public class StringRev {
+
+
+
+public static void main(String s[])
+{
+	A b=new B();
+	b.methodB();
+	String or="HelloTester";
+	String rev=""; char ch;
+	for(int i=0;i<or.length();i++)
+	{
+		ch=or.charAt(i);
+		rev=ch+rev;
+	}
+	System.out.println(rev);
+	for(int i=1;i<11;i++)
+	{
+		System.out.println(i);
+	}
+	intExtend a=new intExtend();
+	a.intMethod();
+	
+		
+}
+static
+{
+	System.out.println("Hi static");
+}
+
+}
+
+
+jagged array:
+
+
+package jaggedArray;
+
+public class jagedArr {
+	public static void main(String[] a)
+	{
+		int arr[][] = new int [3][];
+		arr[0]=new int[2];
+		arr[1]=new int[3];
+		arr[2]=new int[5];
+		for(int i = 0;i<3;i++)
+		{
+			for(int j=0;j<arr[i].length;j++)
+			{
+				arr[i][j]=(int)(Math.random());
+			
+			System.out.println(arr[i][j]);
+			}
+			System.out.println('\n');
+		}
+	}
+
+}
+
+
+
